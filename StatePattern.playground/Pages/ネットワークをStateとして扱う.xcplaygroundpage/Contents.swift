@@ -47,5 +47,33 @@ struct NetworkError:State{
     }
 }
 
+//シングルトンで値型にしないと状態がうまく管理できない
+class NetworkStateManager{
+    static let shared = NetworkStateManager()
+    
+    private var state:State?
+    
+    func change(state:State) {
+        self.state = state
+    }
+    
+    func stateDescription() -> String{
+        return self.state?.stateDescription() ?? ""
+    }
+    
+    func responseToRequest() -> String {
+        return self.state?.responseToRequest() ?? ""
+    }
+
+}
+
+var manager = NetworkStateManager()
+manager.change(state: NetworkError())
+manager.stateDescription()
+manager.responseToRequest()
+
+manager.change(state: Offline())
+manager.stateDescription()
+manager.responseToRequest()
 
 //: [Next](@next)
