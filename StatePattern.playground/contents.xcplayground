@@ -4,5 +4,6 @@
         <page name='プリミティブな実装'/>
         <page name='StatePatternYumichan'/>
         <page name='ネットワークをStateとして扱う'/>
+        <page name='Model Controllerの考え方を導入してみる'/>
     </pages>
 </playground>
