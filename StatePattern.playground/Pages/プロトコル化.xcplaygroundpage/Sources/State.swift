@@ -3,9 +3,9 @@ public protocol State{
     func responseToRequest() -> String
 }
 
-public struct Default:State{
+public struct StandBy:State{
     public func stateDescription() -> String {
-        return "デフォルトの状態です"
+        return "待機状態です"
     }
     
     public func responseToRequest() -> String {

@@ -5,5 +5,6 @@
         <page name='StatePatternYumichan'/>
         <page name='ネットワークをStateとして扱う'/>
         <page name='Model Controllerの考え方を導入してみる'/>
+        <page name='プロトコル化'/>
     </pages>
 </playground>
